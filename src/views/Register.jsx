@@ -68,12 +68,12 @@ const Register = () => {
               Registrarse
             </button>
             <div className="mb-2 text-2xs font-bold underline">
-              <a href="#">Olvidé mi contraseña</a>
+            <a href="/recovery-password">Olvidé mi contraseña</a>
             </div>
           </div >
         </form>
         <div id="disclaimer" className="text-2xs text-gray-500 text-left absolute bottom-10 p-5">
-          Al registrarte, aceptas nuestras <a href="#"><span className="font-bold underline">Condiciones de uso</span></a> y confirmas que has leído el <a href="#"><span className="font-bold underline">Aviso de Privacidad</span></a> y <a href="#"><span className="font-bold underline">Política de Cookies</span></a>.
+          Al registrarte, aceptas nuestras <a href="/terms"><span className="font-bold underline">Condiciones de uso</span></a> y confirmas que has leído el <a href="/terms"><span className="font-bold underline">Aviso de Privacidad</span></a> y <a href="/terms"><span className="font-bold underline">Política de Cookies</span></a>.
         </div>
       </section >
     </>
