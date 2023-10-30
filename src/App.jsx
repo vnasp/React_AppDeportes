@@ -5,25 +5,28 @@ import Footer from "./components/Footer"
 import Home from "./views/Home"
 import Register from "./views/Register"
 import NotFound from "./views/NotFound"
+import Activities from "./views/Activities"
 
 function App() {
 
   return (
     <>
-    <Header/>
-    <Routes>
+      <Header />
+      <Routes>
         <Route
           path="/"
           element={<Home />}
         />
         <Route path="/register"
           element={<Register />} />
+        <Route path="/activities"
+          element={<Activities />} />
         <Route
           path="*"
           element={<NotFound />}
         />
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   )
 }

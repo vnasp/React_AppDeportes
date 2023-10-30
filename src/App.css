@@ -32,3 +32,13 @@
   opacity: 1; /* Firefox */
   font-size:12px;
 }
+::-webkit-scrollbar {
+  display:none;
+}
+.grade {
+  letter-spacing: -0.55em;
+  font-variation-settings: 'FILL' 1;
+}
+.gradeoff {
+  color:lightgray;
+}

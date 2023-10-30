@@ -15,13 +15,8 @@ const Register = () => {
   }
 
   const handleRegister = (e) => {
-    setNewCustomer([...customer, {
-      firstname: firstname,
-      lastname: lastname,
-      email: email,
-      password: password,
-    }])
-    navigate(`/hola`)
+   
+    navigate(`/activities`)
   }
 
   const handleTerms = () => {
