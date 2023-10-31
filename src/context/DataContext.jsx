@@ -6,6 +6,8 @@ const DataProvider = ({ children }) => {
   const CLP = new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' })
   const [ customer, setCustomer ] = useState({})
   const [ activities, setActivities ] = useState([])
+  const [searchResult, setSearchResult] = useState([])
+
 
   try {
     const getActivities = async () => {
@@ -15,6 +17,7 @@ const DataProvider = ({ children }) => {
         }
         const data = await response.json()
         setActivities(data)
+  
     }
     useEffect(() => {
       getActivities()
@@ -25,7 +28,7 @@ catch (Error) {
 }
 
   return (
-    <DataContext.Provider value={{ customer, setCustomer, activities, setActivities, CLP }}>
+    <DataContext.Provider value={{ customer, setCustomer, activities, setActivities, searchResult, setSearchResult, CLP }}>
         {children}
     </DataContext.Provider>
 )

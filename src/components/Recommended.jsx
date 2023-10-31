@@ -4,11 +4,12 @@ import { DataContext } from "../context/DataContext"
 
 const Recommended = () => {
   const { activities } = useContext(DataContext)
-
+  const recomm_activities = activities.filter((activity) => activity.distance <= 10)
+  recomm_activities.sort((x, y) => x.distance - y.distance)
 
   return (
     <>
-      {activities.map((activity) => (
+      {recomm_activities.map((activity) => (
         <div className="flex flex-col justify-start items-start me-3" key={activity.id}>
           <div className="bg-gray-300 rounded-lg w-32 h-20 flex justify-end items-start">
             <Favorites />
@@ -18,7 +19,7 @@ const Recommended = () => {
             <div><span className="material-symbols-outlined text-sm">
               location_on
             </span></div>
-            <div> A {activity.distance}</div>
+            <div> A {activity.distance} KM</div>
           </div>
           <div>
             {activity.grade == 5 ? <div className="material-symbols-outlined text-sm grade">grade grade grade grade grade</div> : ''}
